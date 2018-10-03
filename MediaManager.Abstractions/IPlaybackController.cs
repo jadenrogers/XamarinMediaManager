@@ -1,4 +1,4 @@
-﻿using System.Threading.Tasks;
+using System.Threading.Tasks;
 
 namespace Plugin.MediaManager.Abstractions
 {
@@ -49,6 +49,8 @@ namespace Plugin.MediaManager.Abstractions
         /// Seeks forward a fixed amount of seconds of the current MediaFile
         /// </summary>
         Task StepForward();
+
+        Task StepFrame( );
 
         /// <summary>
         /// Seeks backward a fixed amount of seconds of the current MediaFile

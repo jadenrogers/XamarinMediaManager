@@ -1,5 +1,7 @@
-﻿using Plugin.MediaManager;
+using System;
+using Plugin.MediaManager;
 using Plugin.MediaManager.Abstractions;
+using Plugin.MediaManager.Abstractions.Enums;
 using Xamarin.Forms;
 
 namespace MediaForms
@@ -34,6 +36,21 @@ namespace MediaForms
         void StopClicked(object sender, System.EventArgs e)
         {
             PlaybackController.Stop();
+        }
+
+        private void StepClicked(object sender, EventArgs e)
+        {
+            var btn = (Button) sender;
+            var step = Convert.ToInt32(btn.CommandParameter);
+            CrossMediaManager.Current.VideoPlayer.StepFrame(step);
+        }
+
+
+        private void PlaySpeedClicked(object sender, EventArgs e)
+        {
+            var btn = ( Button ) sender;
+            PlaySpeed speed = ( PlaySpeed ) Enum.Parse( typeof(PlaySpeed), btn.CommandParameter.ToString() );
+            CrossMediaManager.Current.VideoPlayer.PlaySpeed( speed );
         }
     }
 }

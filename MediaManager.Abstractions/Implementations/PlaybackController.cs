@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Threading.Tasks;
 using Plugin.MediaManager.Abstractions.Enums;
 
@@ -92,6 +92,11 @@ namespace Plugin.MediaManager.Abstractions.Implementations
             var destination = PositionSeconds + StepSeconds;
 
             await SeekTo(destination);
+        }
+
+        public async Task StepFrame()
+        {
+            await _mediaManager.PlaybackController.StepForward();
         }
 
         public virtual async Task StepBackward()
