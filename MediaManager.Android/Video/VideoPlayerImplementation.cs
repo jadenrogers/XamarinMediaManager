@@ -203,9 +203,9 @@ namespace Plugin.MediaManager
 
         public TimeSpan Buffered => VideoViewCanvas == null ? TimeSpan.Zero : TimeSpan.FromSeconds(VideoViewCanvas.BufferPercentage);
 
-        public TimeSpan Duration => VideoViewCanvas == null ? TimeSpan.Zero : TimeSpan.FromSeconds(VideoViewCanvas.Duration);
+        public TimeSpan Duration => VideoViewCanvas == null ? TimeSpan.Zero : TimeSpan.FromMilliseconds(VideoViewCanvas.Duration);
 
-        public TimeSpan Position => VideoViewCanvas == null ? TimeSpan.Zero : TimeSpan.FromSeconds(VideoViewCanvas.CurrentPosition);
+        public TimeSpan Position => VideoViewCanvas == null ? TimeSpan.Zero : TimeSpan.FromMilliseconds(VideoViewCanvas.CurrentPosition);
         private int lastPosition = 0;
 
         private MediaPlayerStatus _status = MediaPlayerStatus.Stopped;
