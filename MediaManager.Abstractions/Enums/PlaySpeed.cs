@@ -5,6 +5,7 @@ namespace Plugin.MediaManager.Abstractions.Enums
         Normal,
         Quarter,
         Half,
-        Double
+        Double,
+        SlowMo
     }
 }

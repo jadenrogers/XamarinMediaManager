@@ -35,8 +35,8 @@
 			<Button Grid.Row="1" Grid.Column="2" TextColor="White" Text="Pause" BackgroundColor="Gray" HeightRequest="50" VerticalOptions="Center" WidthRequest="100" Clicked="PauseClicked"></Button>
 			<Button Grid.Row="1" Grid.Column="3" TextColor="White" Text="Stop" BackgroundColor="Gray" HeightRequest="50" VerticalOptions="Center" WidthRequest="100" Clicked="StopClicked"></Button>
             <Button Grid.Row="1" Grid.Column="4" TextColor="White" Text="Step +" BackgroundColor="Gray" HeightRequest="50" VerticalOptions="Center" WidthRequest="100" CommandParameter="1" Clicked="StepClicked"></Button>
-		    <Button Grid.Row="2" Grid.Column="0" TextColor="White" Text="Quarter" BackgroundColor="Gray" HeightRequest="50" VerticalOptions="Center" WidthRequest="100" CommandParameter="Quarter" Clicked="PlaySpeedClicked"></Button>
-            <Button Grid.Row="2" Grid.Column="1" TextColor="White" Text="Half" BackgroundColor="Gray" HeightRequest="50" VerticalOptions="Center" WidthRequest="100" CommandParameter="Half" Clicked="PlaySpeedClicked"></Button>
+		    <Button Grid.Row="2" Grid.Column="0" TextColor="White" Text="SlowMo" BackgroundColor="Gray" HeightRequest="50" VerticalOptions="Center" WidthRequest="100" CommandParameter="SlowMo" Clicked="PlaySpeedClicked"></Button>
+            <Button Grid.Row="2" Grid.Column="1" TextColor="White" Text="Quarter" BackgroundColor="Gray" HeightRequest="50" VerticalOptions="Center" WidthRequest="100" CommandParameter="Quarter" Clicked="PlaySpeedClicked"></Button>
 		    <Button Grid.Row="2" Grid.Column="2" TextColor="White" Text="Normal" BackgroundColor="Gray" HeightRequest="50" VerticalOptions="Center" WidthRequest="100" CommandParameter="Normal" Clicked="PlaySpeedClicked"></Button>
 		    <Button Grid.Row="2" Grid.Column="3" TextColor="White" Text="Double" BackgroundColor="Gray" HeightRequest="50" VerticalOptions="Center" WidthRequest="100" CommandParameter="Double" Clicked="PlaySpeedClicked"></Button>
         </Grid>

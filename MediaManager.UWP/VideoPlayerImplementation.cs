@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Numerics;
@@ -261,6 +261,9 @@ namespace Plugin.MediaManager
         }
 
         public VideoAspectMode AspectMode { get; set; }
+        public Task StepFrame(int frameCount = 1) => throw new NotImplementedException();
+
+        public Task PlaySpeed(PlaySpeed speed) => throw new NotImplementedException();
 
         private async Task<MediaSource> CreateMediaSource(IMediaFile mediaFile)
         {
