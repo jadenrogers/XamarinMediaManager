@@ -39,6 +39,7 @@
             <Button Grid.Row="2" Grid.Column="1" TextColor="White" Text="Quarter" BackgroundColor="Gray" HeightRequest="50" VerticalOptions="Center" WidthRequest="100" CommandParameter="Quarter" Clicked="PlaySpeedClicked"></Button>
 		    <Button Grid.Row="2" Grid.Column="2" TextColor="White" Text="Normal" BackgroundColor="Gray" HeightRequest="50" VerticalOptions="Center" WidthRequest="100" CommandParameter="Normal" Clicked="PlaySpeedClicked"></Button>
 		    <Button Grid.Row="2" Grid.Column="3" TextColor="White" Text="Double" BackgroundColor="Gray" HeightRequest="50" VerticalOptions="Center" WidthRequest="100" CommandParameter="Double" Clicked="PlaySpeedClicked"></Button>
+		    <Button Grid.Row="2" Grid.Column="4" TextColor="White" Text="Test" BackgroundColor="Gray" HeightRequest="50" VerticalOptions="Center" WidthRequest="100" CommandParameter="Double" Clicked="Button_OnClicked"></Button>
         </Grid>
 	
 	</Grid>

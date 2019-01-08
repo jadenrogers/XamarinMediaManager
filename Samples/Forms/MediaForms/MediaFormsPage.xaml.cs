@@ -52,5 +52,10 @@ namespace MediaForms
             PlaySpeed speed = ( PlaySpeed ) Enum.Parse( typeof(PlaySpeed), btn.CommandParameter.ToString() );
             CrossMediaManager.Current.VideoPlayer.PlaySpeed( speed );
         }
+
+        private void Button_OnClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new MediaFormsPage());
+        }
     }
 }
