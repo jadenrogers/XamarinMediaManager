@@ -13,7 +13,6 @@ using Java.Util.Concurrent;
 using Plugin.MediaManager.Abstractions;
 using Plugin.MediaManager.Abstractions.Enums;
 using Plugin.MediaManager.Abstractions.EventArguments;
-using Plugin.MediaManager.Abstractions.Implementations;
 
 namespace Plugin.MediaManager
 {
@@ -87,6 +86,7 @@ namespace Plugin.MediaManager
 
                 var canvas = (VideoSurface)value;
                 _renderSurface = canvas;
+                isPlayerReady = false;
             }
         }
 
@@ -205,7 +205,24 @@ namespace Plugin.MediaManager
 
         public TimeSpan Duration => VideoViewCanvas == null ? TimeSpan.Zero : TimeSpan.FromMilliseconds(VideoViewCanvas.Duration);
 
-        public TimeSpan Position => VideoViewCanvas == null ? TimeSpan.Zero : TimeSpan.FromMilliseconds(VideoViewCanvas.CurrentPosition);
+        public TimeSpan Position
+        {
+            get
+            {
+                try
+                {
+                    return VideoViewCanvas == null
+                        ? TimeSpan.Zero
+                        : TimeSpan.FromMilliseconds(VideoViewCanvas.CurrentPosition);
+                }
+                catch
+                {
+                    return TimeSpan.Zero;
+                }
+            }
+        }
+
+
         private int lastPosition = 0;
 
         private MediaPlayerStatus _status = MediaPlayerStatus.Stopped;
