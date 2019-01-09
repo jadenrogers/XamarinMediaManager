@@ -114,7 +114,7 @@ namespace Plugin.MediaManager
             return Task.FromResult(0);
         }
 
-        public Task PlaySpeed(PlaySpeed speed)
+        public async Task PlaySpeed(PlaySpeed speed)
         {
             float s;
 
@@ -143,10 +143,11 @@ namespace Plugin.MediaManager
 
             var para = _mediaPlayer.PlaybackParams;
             para.SetSpeed(s);
-            
+
+            await Play();
             _mediaPlayer.PlaybackParams = para;
 
-            return Task.FromResult(0);
+            return;
         }
 
         VideoView VideoViewCanvas => RenderSurface as VideoView;
