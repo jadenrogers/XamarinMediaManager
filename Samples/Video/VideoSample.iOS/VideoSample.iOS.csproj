@@ -135,6 +135,8 @@
     <ProjectReference Include="..\..\..\MediaManager.iOS\Plugin.MediaManager.iOS.csproj">
       <Project>{2882AEEB-D4CD-4EB9-8A6C-6653B33681F0}</Project>
       <Name>Plugin.MediaManager.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
